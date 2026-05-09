@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 import type { DecodeMeta } from "@/features/json-builder/types";
 import { deepDecodeWithMeta } from "@/features/json-builder/utils/deep-decode-with-meta";
 import { deepReEncode } from "@/features/json-builder/utils/deep-re-encode";
@@ -10,6 +11,7 @@ export default function useEditor() {
 
   const handleCopyRawText = () => {
     navigator.clipboard.writeText(raw);
+    toast.success("Raw JSON Copied!");
   };
 
   const handleClearRawText = async () => {
@@ -18,6 +20,7 @@ export default function useEditor() {
 
   const handleCopyBeautifiedText = () => {
     navigator.clipboard.writeText(beautified);
+    toast.success("Parsed JSON Copied!");
   };
 
   const handleClearBeautifiedText = async () => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageWrapper from "@/components/presentation/page-wrapper";
 import URLComposser from "@/features/url-builder";
 
 export const metadata: Metadata = {
@@ -7,9 +8,9 @@ export const metadata: Metadata = {
 
 const URLComposserPage = () => {
   return (
-    <div className="py-[53px] max-w-[var(--max-page-width)] mx-auto">
+    <PageWrapper>
       <URLComposser />
-    </div>
+    </PageWrapper>
   );
 };
 

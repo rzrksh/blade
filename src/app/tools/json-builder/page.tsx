@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageWrapper from "@/components/presentation/page-wrapper";
 import JSONBuilder from "@/features/json-builder";
 
 export const metadata: Metadata = {
@@ -7,9 +8,9 @@ export const metadata: Metadata = {
 
 const JSONBuilderPage = () => {
   return (
-    <div className="pt-[52px] pb-[24px] max-w-[var(--max-page-width)] mx-auto">
+    <PageWrapper>
       <JSONBuilder />
-    </div>
+    </PageWrapper>
   );
 };
 

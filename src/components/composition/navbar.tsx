@@ -1,10 +1,8 @@
-"use-client";
-
 import { MoonIcon, SunIcon, SunMoonIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useAppThemeContext } from "@/app/context/theme";
+import { useAppThemeContext } from "@/context/theme";
+import useCheckMounted from "@/hooks/use-check-mounted";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select";
 
 const themeIcon = {
@@ -13,40 +11,48 @@ const themeIcon = {
   dark: <MoonIcon />,
 };
 
-const logo = {
-  dark: "/rzrblade-dark-mode.svg",
-  light: "/rzrblade-light-mode.svg",
-};
-
 const Navbar = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const { isMounted } = useCheckMounted();
   const { theme, handleChangeTheme } = useAppThemeContext();
-
-  useEffect(() => setIsMounted(true), []);
 
   return (
     <header className="w-full z-10 bg-[var(--background))] border-b fixed top-0">
       <nav className="px-16 max-w-[var(--max-page-width)] mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/">
-            {isMounted && (
-              <Image
-                src={logo[theme]}
-                width={100}
-                height={17}
-                draggable={false}
-                alt="rzrblade logo"
-              />
-            )}
+            <Image
+              src="/rzrblade-light-mode.svg"
+              width={100}
+              height={17}
+              alt="rzrblade logo"
+              draggable={false}
+              className="dark:hidden"
+            />
+            <Image
+              src="/rzrblade-dark-mode.svg"
+              width={100}
+              height={17}
+              alt="rzrblade logo"
+              draggable={false}
+              className="hidden dark:block"
+            />
           </Link>
           <div className="flex text-sm p-2 gap-6 items-center">
             <Link href="/tools" className="inline-block">
               Tools
             </Link>
-            <Link href="/about" className="inline-block">
+            <Link
+              href="https://initiative-z.com/erazarkasih"
+              className="inline-block"
+              target="_blank"
+            >
               About
             </Link>
-            <Link href="/" className="inline-block">
+            <Link
+              href="https://github.com/rzrksh/rzrblade"
+              className="inline-block"
+              target="_blank"
+            >
               Contribute
             </Link>
             <div className="min-h-[36px] min-w-[66px] mr-1">

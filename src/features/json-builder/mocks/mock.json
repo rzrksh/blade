@@ -1,0 +1,22 @@
+{
+  "id": "ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKemRXSWlPaUp5ZW1JeE1qTWlmUS5zaWduYXR1cmU=",
+  "token": "{\"access\":\"ZXlKa2FYUWlPaUl4TWpNME5UWTNPRGtpTENKbGVIQWlPakUzTlRFeU1ETXlNREI5\"}",
+  "session": "{\"data\":\"{\\\"user\\\":\\\"WlhsS2VtUlhTV2xQYVVwdg==\\\",\\\"role\\\":0}\"}",
+  "config": "{\"theme\":\"WkdGeWEwMXZaR1U9\",\"lang\":\"YVc1a2IyNWxjMmxo\"}",
+  "payload": "eyJtZXNzYWdlIjoiU0dWc2JHOGdWMjl5YkdRaSJ9",
+  "cache": "{\"blob\":\"ZXlKemRXSWlPaUprWldWd0luMD0=\"}",
+  "meta": "{\"nested\":\"{\\\"v\\\":\\\"ZXlKa1lYUmhJam9pWlhsS2VtUlhTV2xQYVVwdkluMD0=\\\"}\"}",
+  "auth": "QmVhcmVyIGV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS4=",
+  "binary": "MDEwMTAxMDEwMTAxMDEwMTA=",
+  "preferences": "{\"compact\":\"ZEhKMVpRPT0=\",\"animations\":\"WlhsUw==\"}",
+  "tracking": "{\"history\":\"W1wiYVwiLFwiYlwiLFwiY1wiXQ==\"}",
+  "router": "{\"path\":\"TDJGemFDOXpkV0lp\",\"redirect\":\"TDJSaGMyaGliMkZ5WkE9PQ==\"}",
+  "storage": "{\"local\":\"e1wia2V5XCI6XCJkbUZzZFdWXCJ9\",\"remote\":\"ZXlKeVpXMXZkR1VpT2lKaGJIQm9ZU0o5\"}",
+  "features": "{\"beta\":\"ZEhKMVpRPT0=\",\"labs\":\"Wm1Gc2MyVT0=\"}",
+  "analytics": "{\"event\":\"Y0dGblpWOWliSFZ5\",\"source\":\"ZDJWaQ==\"}",
+  "crypto": "{\"hash\":\"YzJWamNtVjBhR0Z6YUE9PQ==\",\"salt\":\"YzJGc2RBPT0=\"}",
+  "deep": "{\"lvl1\":\"{\\\"lvl2\\\":\\\"{\\\\\\\"lvl3\\\\\\\":\\\\\\\"ZXlKemRXSWlPaUpqY205M2JIa2lmUT09\\\\\\\"}\\\"}\"}",
+  "flags": "{\"debug\":\"Wm1Gc2MyVT0=\",\"safe\":\"ZEhKMVpRPT=\"}",
+  "transport": "{\"protocol\":\"YUhSMGNITTZMeTkzWldJdVkyOXRMM0psYzI5MWNtTmxjeTlrWVhSaA==\"}",
+  "final": "{\"status\":\"YjJzPQ==\",\"message\":\"Vlc1cWIza2djM1J5YVc1bmN5QnBibk5wWkdVZ1pXNWpiMlJsWkE9PQ==\"}"
+}

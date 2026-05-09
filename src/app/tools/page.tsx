@@ -1,9 +1,10 @@
+import PageWrapper from "@/components/presentation/page-wrapper";
 import Home from "@/features/home";
 
 const Homepage = () => (
-  <div className="py-[53px] max-w-[var(--max-page-width)] mx-auto">
+  <PageWrapper>
     <Home />
-  </div>
+  </PageWrapper>
 );
 
 export default Homepage;

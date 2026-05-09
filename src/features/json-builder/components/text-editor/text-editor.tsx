@@ -1,7 +1,7 @@
 "use client";
 
 import { Editor } from "@monaco-editor/react";
-import { useAppThemeContext } from "@/app/context/theme";
+import { useAppThemeContext } from "@/context/theme";
 import ButtonTools from "../button-tools";
 import useEditor from "./usecase/use-editor";
 
