@@ -2,7 +2,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata = {
-  title: "rzrblade - Dev Super Toolbox",
+  title: "Blade - Dev Super Toolbox",
   description: "Your one stop developer toolbox",
   icons: {
     icon: [
