@@ -30,7 +30,7 @@ export default function JsonEditor() {
           onClickClear={handleClearRawText}
         />
         <Editor
-          height="80vh"
+          height="70vh"
           defaultLanguage="json"
           value={raw}
           theme={EDITOR_THEME[theme]}
@@ -43,7 +43,7 @@ export default function JsonEditor() {
           onClickClear={handleClearBeautifiedText}
         />
         <Editor
-          height="80vh"
+          height="70vh"
           defaultLanguage="json"
           value={beautified}
           theme={EDITOR_THEME[theme]}

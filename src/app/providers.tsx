@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import Footer from "@/components/composition/footer";
 import Navbar from "@/components/composition/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,7 +14,6 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
           <Toaster position="top-center" />
           <Navbar />
           {children}
-          <Footer />
         </TooltipProvider>
       </AppThemeProvider>
     </NextThemesProvider>

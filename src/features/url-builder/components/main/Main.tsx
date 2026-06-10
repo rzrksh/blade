@@ -3,7 +3,7 @@ import { PageRenderer } from "../page-renderer";
 
 export const Main = () => {
   return (
-    <main className="mt-6 px-16 min-h-[100svh]">
+    <main className="mt-6 px-16">
       <div className="mb-6">
         <h1 className="text-4xl font-bold mb-1 text-gray-950 dark:text-gray-50">
           URL Builder

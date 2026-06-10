@@ -1,10 +1,10 @@
 import PageWrapper from "@/components/presentation/page-wrapper";
-import Home from "@/features/home";
+import Tools from "@/features/tools";
 
-const Homepage = () => (
+const ToolsPage = () => (
   <PageWrapper>
-    <Home />
+    <Tools />
   </PageWrapper>
 );
 
-export default Homepage;
+export default ToolsPage;

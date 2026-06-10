@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/presentation/page-wrapper";
-import JSONBuilder from "@/features/json-builder";
+import QRCR from "@/features/qr-code";
 
 export const metadata: Metadata = {
   title: "JSON Builder | Blade",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const JSONBuilderPage = () => {
   return (
     <PageWrapper>
-      <JSONBuilder />
+      <QRCR />
     </PageWrapper>
   );
 };

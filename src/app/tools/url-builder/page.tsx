@@ -3,7 +3,7 @@ import PageWrapper from "@/components/presentation/page-wrapper";
 import URLComposser from "@/features/url-builder";
 
 export const metadata: Metadata = {
-  title: "URL Builder | rzrblade",
+  title: "URL Builder | Blade",
 };
 
 const URLComposserPage = () => {

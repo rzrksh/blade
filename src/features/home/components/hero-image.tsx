@@ -10,14 +10,16 @@ export const HeroImage = () => {
         width={300}
         height={300}
         alt="rzrblade logo"
-        className="mx-auto mb-6 dark:hidden"
+        className="dark:hidden"
+        draggable={false}
       />
       <Image
         src="/rzrblade-emblem-dark.svg"
         width={300}
         height={300}
         alt="rzrblade logo"
-        className="mx-auto mb-6 hidden dark:block"
+        className="hidden dark:block"
+        draggable={false}
       />
     </>
   );

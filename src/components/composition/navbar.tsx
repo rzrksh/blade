@@ -38,6 +38,9 @@ const Navbar = () => {
             />
           </Link>
           <div className="flex text-sm p-2 gap-6 items-center">
+            <Link href="/change-log" className="inline-block">
+              Changelog
+            </Link>
             <Link href="/tools" className="inline-block">
               Tools
             </Link>
