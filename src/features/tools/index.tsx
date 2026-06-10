@@ -9,7 +9,7 @@ const Tools = () => {
           <p className="text-gray-500">
             Select and use the tools you need. Everything runs in your browser,
             <br />
-            no sign up, no tracking, no nonsense.
+            no sign up, no tracking.
           </p>
         </div>
         <div className="flex-1"></div>
