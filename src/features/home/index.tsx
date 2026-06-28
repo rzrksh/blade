@@ -17,7 +17,7 @@ export const Home = () => {
       <main className="px-4 md:px-8 lg:px-16 max-w-[var(--max-home-width)] mx-auto mb-12">
         <div className="mt-10 md:mt-20 mb-12 md:mb-20 flex flex-col lg:flex-row justify-center items-center gap-8 md:gap-14">
           <div className="w-full lg:flex-1">
-            <h1 className="text-4xl md:text-5xl lg:text-[5.5rem] font-bold mb-4 md:mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
               Development
               <br className="hidden md:block" />
               Super Toolbox

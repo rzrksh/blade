@@ -19,7 +19,7 @@ const Navbar = () => {
     <header className="w-full z-10 bg-[var(--background))] border-b fixed top-0">
       <nav className="px-16 max-w-[var(--max-page-width)] mx-auto">
         <div className="flex justify-between items-center">
-          <Link href="/">
+          <Link href="/" prefetch={false}>
             <Image
               src="/blade-light-mode.svg"
               width={100}
@@ -38,10 +38,10 @@ const Navbar = () => {
             />
           </Link>
           <div className="flex text-sm p-2 gap-6 items-center">
-            <Link href="/change-log" className="inline-block">
+            <Link href="/change-log" className="inline-block" prefetch={false}>
               Changelog
             </Link>
-            <Link href="/tools" className="inline-block">
+            <Link href="/tools" className="inline-block" prefetch={false}>
               Tools
             </Link>
             <Link

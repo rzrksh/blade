@@ -44,9 +44,10 @@ const tools: Tool[] = [
 const Tools = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredTools = tools.filter((tool) =>
-    tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    tool.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredTools = tools.filter(
+    (tool) =>
+      tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -54,7 +55,7 @@ const Tools = () => {
       <div className="mt-10 flex flex-col md:flex-row gap-8 md:gap-14 mb-12 md:mb-16">
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            All tools. <span className="text-lime-400">One toolbox.</span>
+            All tools. <span className="dark:text-lime-400">One toolbox.</span>
           </h1>
           <p className="text-gray-500 text-sm md:text-base">
             Select and use the tools you need. Everything runs in your browser,
@@ -80,7 +81,9 @@ const Tools = () => {
           <Link key={tool.id} href={tool.href} className="h-full">
             <Card className="p-4 md:p-6 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer h-full flex flex-col">
               <CardTitle className="mb-2">{tool.name}</CardTitle>
-              <CardDescription className="leading-relaxed flex-grow">{tool.description}</CardDescription>
+              <CardDescription className="leading-relaxed flex-grow">
+                {tool.description}
+              </CardDescription>
             </Card>
           </Link>
         ))}
