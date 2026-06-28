@@ -6,18 +6,18 @@ export const HeroImage = () => {
   return (
     <>
       <Image
-        src="/rzrblade-emblem-light.svg"
+        src="/blade-emblem-light.svg"
         width={300}
         height={300}
-        alt="rzrblade logo"
+        alt="blade logo"
         className="dark:hidden"
         draggable={false}
       />
       <Image
-        src="/rzrblade-emblem-dark.svg"
+        src="/blade-emblem-dark.svg"
         width={300}
         height={300}
-        alt="rzrblade logo"
+        alt="blade logo"
         className="hidden dark:block"
         draggable={false}
       />

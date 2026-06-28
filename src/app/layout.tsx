@@ -6,14 +6,14 @@ export const metadata = {
   description: "Your one stop developer toolbox",
   icons: {
     icon: [
-      { url: "/rzrblade-emblem-dark.png", sizes: "32x32", type: "image/png" },
-      { url: "/rzrblade-emblem-dark.png", sizes: "48x48", type: "image/png" },
+      { url: "/blade.png", sizes: "32x32", type: "image/png" },
+      { url: "/blade.png", sizes: "48x48", type: "image/png" },
     ],
-    apple: "/rzrblade-emblem-dark.png",
+    apple: "/blade.png",
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/rzrblade-emblem-dark.png"],
+    images: ["/blade.png"],
   },
 };
 

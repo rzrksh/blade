@@ -21,18 +21,18 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image
-              src="/rzrblade-light-mode.svg"
+              src="/blade-light-mode.svg"
               width={100}
               height={17}
-              alt="rzrblade logo"
+              alt="blade logo"
               draggable={false}
               className="dark:hidden"
             />
             <Image
-              src="/rzrblade-dark-mode.svg"
+              src="/blade-dark-mode.svg"
               width={100}
               height={17}
-              alt="rzrblade logo"
+              alt="blade logo"
               draggable={false}
               className="hidden dark:block"
             />
@@ -52,7 +52,7 @@ const Navbar = () => {
               About
             </Link>
             <Link
-              href="https://github.com/rzrksh/rzrblade"
+              href="https://github.com/rzrksh/blade"
               className="inline-block"
               target="_blank"
             >
