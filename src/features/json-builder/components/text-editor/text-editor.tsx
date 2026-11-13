@@ -1,9 +1,13 @@
 "use client";
 
 import { Editor } from "@monaco-editor/react";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useAppThemeContext } from "@/context/theme";
 import ButtonTools from "../button-tools";
 import useEditor from "./usecase/use-editor";
+
+// Re-measure on window resize / rotation so the editor never overflows.
+const EDITOR_OPTIONS = { automaticLayout: true };
 
 const EDITOR_THEME = {
   dark: "vs-dark",
@@ -23,32 +27,40 @@ export default function JsonEditor() {
   } = useEditor();
   const { theme } = useAppThemeContext();
   return (
-    <div className="flex gap-2 w-full">
-      <div className="flex-1">
+    <div className="flex w-full flex-col gap-4 md:flex-row md:gap-2">
+      <div className="min-w-0 flex-1">
         <ButtonTools
           onClickCopy={handleCopyRawText}
           onClickClear={handleClearRawText}
         />
-        <Editor
-          height="70vh"
-          defaultLanguage="json"
-          value={raw}
-          theme={EDITOR_THEME[theme]}
-          onChange={(v) => setRaw(v || "")}
-        />
+        <div className="h-[45vh] md:h-[70vh]">
+          <Editor
+            height="100%"
+            options={EDITOR_OPTIONS}
+            defaultLanguage="json"
+            loading={<Skeleton className="h-full w-full rounded-md" />}
+            value={raw}
+            theme={EDITOR_THEME[theme]}
+            onChange={(v) => setRaw(v || "")}
+          />
+        </div>
       </div>
-      <div className="flex-1">
+      <div className="min-w-0 flex-1">
         <ButtonTools
           onClickCopy={handleCopyBeautifiedText}
           onClickClear={handleClearBeautifiedText}
         />
-        <Editor
-          height="70vh"
-          defaultLanguage="json"
-          value={beautified}
-          theme={EDITOR_THEME[theme]}
-          onChange={onBeautifiedChange}
-        />
+        <div className="h-[45vh] md:h-[70vh]">
+          <Editor
+            height="100%"
+            options={EDITOR_OPTIONS}
+            defaultLanguage="json"
+            loading={<Skeleton className="h-full w-full rounded-md" />}
+            value={beautified}
+            theme={EDITOR_THEME[theme]}
+            onChange={onBeautifiedChange}
+          />
+        </div>
       </div>
     </div>
   );

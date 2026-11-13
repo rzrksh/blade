@@ -1,34 +1,28 @@
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ToolHeader } from "@/components/composition/tool-header";
 import { URLComposerConfig } from "../config";
 import { PageRenderer } from "../page-renderer";
+import { SavedURL } from "../saved-url";
 
 export const Main = () => {
   return (
-    <main className="mt-6 px-16">
-      <div className="mb-6 flex items-center gap-4">
-        <Button variant="outline" size="icon" asChild>
-          <Link href="/tools">
-            <ArrowLeft />
-          </Link>
-        </Button>
-        <div>
-          <h1 className="text-4xl font-bold mb-1 text-gray-950 dark:text-gray-50">
-            URL Builder
-          </h1>
-          <h2 className="text-gray-600 dark:text-gray-400">
-            Compose, decompose, and transform URLs. Features URL templating,
-            encoding/decoding.
-          </h2>
-        </div>
-      </div>
-      <div className="flex justify-between w-full mx-auto gap-4">
-        <div className="min-w-[calc(65%-theme(space.2))]">
+    <main className="mt-6 px-4 md:px-8 lg:px-16 mb-12">
+      <ToolHeader
+        title="URL Builder"
+        description="Compose, decompose, and transform URLs. Features URL templating, encoding/decoding."
+      />
+      {/*
+        Phones: config, then the editor, then saved URLs.
+        Desktop: editor on the left, config and saved URLs stacked on the right.
+      */}
+      <div className="grid w-full grid-cols-1 gap-4 [grid-template-areas:'config'_'main'_'saved'] lg:grid-cols-[minmax(0,65fr)_minmax(0,35fr)] lg:grid-rows-[auto_1fr] lg:[grid-template-areas:'main_config'_'main_saved']">
+        <div className="min-w-0 [grid-area:main]">
           <PageRenderer />
         </div>
-        <div className="min-w-[calc(35%-theme(space.2))]">
+        <div className="min-w-0 [grid-area:config]">
           <URLComposerConfig />
+        </div>
+        <div className="min-w-0 self-start [grid-area:saved]">
+          <SavedURL />
         </div>
       </div>
     </main>

@@ -31,7 +31,7 @@ export const URLComposerConfig = () => {
   } = useUrlBuilderContext();
 
   return (
-    <Card className="min-w-[25%]">
+    <Card className="min-w-0">
       <CardHeader>
         <CardTitle>URL Builder Config</CardTitle>
         <CardDescription>Change you URL Builder Config.</CardDescription>
@@ -40,7 +40,7 @@ export const URLComposerConfig = () => {
         <Label className="mb-2" htmlFor="select-ops">
           Operation
         </Label>
-        <Select defaultValue={config} onValueChange={handleSetConfig}>
+        <Select value={config} onValueChange={handleSetConfig}>
           <SelectTrigger id="select-ops" className="w-[100%]">
             <SelectValue />
           </SelectTrigger>

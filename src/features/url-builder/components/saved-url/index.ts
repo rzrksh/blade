@@ -1,1 +1,1 @@
-export { SavedURL } from './SavedURL'
+export { SavedURL } from "./SavedURL";

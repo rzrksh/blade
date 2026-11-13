@@ -1,27 +1,14 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ToolHeader } from "@/components/composition/tool-header";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import TextEditor from "./components/text-editor";
 
 const JSONBuilder = () => {
   return (
-    <main className="mt-6 px-4 md:px-8 lg:px-16">
-      <div className="mb-6 flex items-center gap-4">
-        <Button variant="outline" size="icon" asChild>
-          <Link href="/tools">
-            <ArrowLeft />
-          </Link>
-        </Button>
-        <div>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 text-gray-950 dark:text-gray-50">
-            JSON Builder
-          </h1>
-          <h2 className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-            Build and parse stringified JSON.
-          </h2>
-        </div>
-      </div>
+    <main className="mt-6 px-4 md:px-8 lg:px-16 mb-12">
+      <ToolHeader
+        title="JSON Builder"
+        description="Build and parse stringified JSON."
+      />
       <Card className="p-2 md:p-4">
         <TextEditor />
       </Card>

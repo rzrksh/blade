@@ -39,12 +39,17 @@ export const UrlNodeHeader = ({
   handleToggleShowFullURL,
 }: Props) => {
   return (
-    <div className="flex items-center justify-between bg-gray-50 dark:bg-[var(--header-section)] rounded-xl p-2">
-      <div className="flex gap-2 items-center">
-        <Button variant="ghost" className="w-[40px]" onClick={handleCollapse}>
+    <div className="flex flex-wrap items-center justify-between gap-2 bg-gray-50 dark:bg-[var(--header-section)] rounded-xl p-2">
+      <div className="flex min-w-0 flex-wrap gap-2 items-center">
+        <Button
+          variant="ghost"
+          className="w-[40px]"
+          onClick={handleCollapse}
+          aria-label={collapsed ? "Expand" : "Collapse"}
+        >
           {collapsed ? <ListChevronsUpDown /> : <ListChevronsDownUp />}
         </Button>
-        <Label>
+        <Label className="flex-wrap">
           {draftNode.level && (
             <Badge
               className="bg-gray-200 dark:bg-lime-400 dark:text-black"
@@ -64,32 +69,54 @@ export const UrlNodeHeader = ({
           </Badge>
         </Label>
       </div>
-      <div className="flex gap-2 items-center">
+      <div className="flex flex-wrap gap-2 items-center">
         {isEdit ? (
           <>
-            <Button size="sm" variant="outline" onClick={handleConfirmChange}>
-              <CircleCheck /> <span>Confirm</span>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={handleConfirmChange}
+              aria-label="Confirm"
+            >
+              <CircleCheck /> <span className="hidden sm:inline">Confirm</span>
             </Button>
-            <Button size="sm" variant="outline" onClick={handleCancelChange}>
-              <CircleX /> <span>Cancel</span>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={handleCancelChange}
+              aria-label="Cancel"
+            >
+              <CircleX /> <span className="hidden sm:inline">Cancel</span>
             </Button>
           </>
         ) : (
-          <Button size="sm" variant="outline" onClick={handleClickEdit}>
-            <Edit /> <span>Edit</span>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={handleClickEdit}
+            aria-label="Edit"
+          >
+            <Edit /> <span className="hidden sm:inline">Edit</span>
           </Button>
         )}
         {!isEdit && (
           <>
-            <Button size="sm" variant="outline" onClick={handleCopy}>
-              <Copy /> <span>Copy</span>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={handleCopy}
+              aria-label="Copy"
+            >
+              <Copy /> <span className="hidden sm:inline">Copy</span>
             </Button>
             <Button
               size="sm"
               variant="outline"
               onClick={handleToggleShowFullURL}
+              aria-label="Toggle full URL"
             >
-              {isShowFullUrl ? <Eye /> : <EyeClosed />} <span>Full URL</span>
+              {isShowFullUrl ? <Eye /> : <EyeClosed />}{" "}
+              <span className="hidden sm:inline">Full URL</span>
             </Button>
           </>
         )}

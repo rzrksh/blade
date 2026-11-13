@@ -45,7 +45,7 @@ export const URLDecomposerTree = ({ urlNode }: Props) => {
   if (!draftNode) return null;
 
   return (
-    <Card className="p-6 min-w-[650px] overflow-auto">
+    <Card className="min-w-0 gap-4 p-3 sm:gap-6 sm:p-6">
       <UrlNodeHeader
         isEdit={isEdit}
         isShowFullUrl={isShowFullUrl}
@@ -92,8 +92,11 @@ export const URLDecomposerTree = ({ urlNode }: Props) => {
               <Badge variant="secondary">URL Search Params</Badge>
             </Label>
             {draftNode.params?.map((item) => (
-              <div key={item.id} className="flex gap-2 mb-2 w-full">
-                <InputGroup className="w-[250px]">
+              <div
+                key={item.id}
+                className="mb-2 flex w-full flex-wrap gap-2 sm:flex-nowrap"
+              >
+                <InputGroup className="w-full sm:w-[250px] sm:shrink-0">
                   <InputGroupInput
                     type="text"
                     value={item.key}
@@ -123,7 +126,7 @@ export const URLDecomposerTree = ({ urlNode }: Props) => {
                     </InputGroupAddon>
                   )}
                 </InputGroup>
-                <InputGroup className="w-full">
+                <InputGroup className="min-w-0 flex-1">
                   <InputGroupInput
                     type="text"
                     value={item.value}
@@ -199,7 +202,7 @@ export const URLDecomposerTree = ({ urlNode }: Props) => {
                 <Input
                   type="text"
                   value={draftNode.hash}
-                  className="w-[250px]"
+                  className="w-full sm:w-[250px]"
                   disabled={!isEdit}
                   onChange={(e) => handleChangeURLHash(e.target.value)}
                 />

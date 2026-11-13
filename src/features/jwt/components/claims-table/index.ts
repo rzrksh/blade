@@ -1,0 +1,1 @@
+export { ClaimsTable } from "./ClaimsTable";

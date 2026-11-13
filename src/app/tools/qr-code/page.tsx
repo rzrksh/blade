@@ -3,10 +3,10 @@ import PageWrapper from "@/components/presentation/page-wrapper";
 import QRCR from "@/features/qr-code";
 
 export const metadata: Metadata = {
-  title: "JSON Builder | Blade",
+  title: "QR Creator / Reader | Blade",
 };
 
-const JSONBuilderPage = () => {
+const QRCodePage = () => {
   return (
     <PageWrapper>
       <QRCR />
@@ -14,4 +14,4 @@ const JSONBuilderPage = () => {
   );
 };
 
-export default JSONBuilderPage;
+export default QRCodePage;

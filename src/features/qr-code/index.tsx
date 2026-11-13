@@ -1,13 +1,23 @@
+"use client";
+
+import { ArrowLeft, QrCode, ScanLine } from "lucide-react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { Segmented } from "@/components/composition/segmented";
 import { Button } from "@/components/ui/button";
+import { Creator } from "./components/creator";
+import { Reader } from "./components/reader";
+
+type Mode = "read" | "create";
 
 const QRReaderBuilder = () => {
+  const [mode, setMode] = useState<Mode>("read");
+
   return (
     <main className="mt-6 px-4 md:px-8 lg:px-16">
       <div className="mb-6 flex items-center gap-4">
         <Button variant="outline" size="icon" asChild>
-          <Link href="/tools">
+          <Link href="/">
             <ArrowLeft />
           </Link>
         </Button>
@@ -16,10 +26,22 @@ const QRReaderBuilder = () => {
             QR Creator / Reader
           </h1>
           <h2 className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-            Generate custom QR codes from any text or URL, and scan existing QR codes directly from your device's camera.
+            Read a QR code from an image or your camera, or turn any URL into
+            one.
           </h2>
         </div>
       </div>
+      <Segmented
+        label="Mode"
+        value={mode}
+        onChange={setMode}
+        className="mb-4"
+        options={[
+          { value: "read", label: "Read QR", icon: <ScanLine /> },
+          { value: "create", label: "Create QR", icon: <QrCode /> },
+        ]}
+      />
+      {mode === "read" ? <Reader /> : <Creator />}
     </main>
   );
 };

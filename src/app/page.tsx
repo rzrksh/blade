@@ -1,9 +1,11 @@
+import Footer from "@/components/composition/footer";
 import PageWrapper from "@/components/presentation/page-wrapper";
-import Home from "@/features/home";
+import Tools from "@/features/tools";
 
 const Homepage = () => (
-  <PageWrapper className="pt-[52px] max-w-[var(--max-page-width)] mx-auto">
-    <Home />
+  <PageWrapper>
+    <Tools />
+    <Footer />
   </PageWrapper>
 );
 

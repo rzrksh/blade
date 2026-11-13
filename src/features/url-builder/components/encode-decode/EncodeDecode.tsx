@@ -42,14 +42,14 @@ export const EncodeDecode = () => {
       : decodeURIComponent(urlInput);
 
   return (
-    <Card className="min-w-full">
-      <CardHeader>
+    <Card className="min-w-0">
+      <CardHeader className="has-data-[slot=card-action]:grid-cols-1 sm:has-data-[slot=card-action]:grid-cols-[1fr_auto]">
         <CardTitle>{OPERATION_NAME[operation]}</CardTitle>
         <CardDescription>
           A simple URL encode / decoder that uses UTF-8
         </CardDescription>
-        <CardAction>
-          <div className="flex gap-2">
+        <CardAction className="col-start-1 row-start-3 justify-self-start sm:col-start-2 sm:row-start-1 sm:justify-self-end">
+          <div className="flex flex-wrap gap-2">
             <Select
               defaultValue={"encode"}
               onValueChange={(value: OperationType) =>
@@ -89,7 +89,7 @@ export const EncodeDecode = () => {
           value={urlInput}
           onChange={(e) => handleChangeTextUrl(e.target.value)}
         />
-        <div className="flex gap-2 items-center justify-between mb-2">
+        <div className="flex flex-wrap gap-2 items-center justify-between mb-2">
           <Label htmlFor="result-url">{URL_RESULT_NAME[operation]} URL</Label>
           {urlInput && (
             <Button

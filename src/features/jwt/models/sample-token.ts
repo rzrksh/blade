@@ -1,0 +1,3 @@
+/** HS256, signed with the secret "blade-demo-secret". Expires in 2100. */
+export const SAMPLE_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkYSBMb3ZlbGFjZSIsImVtYWlsIjoiYWRhQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLmV4YW1wbGUuY29tIiwiYXVkIjoiYmxhZGUtZGVtbyIsImlhdCI6MTc2NzIyNTYwMCwiZXhwIjo0MTAyNDQ0ODAwfQ.ob0C9nSpyE3sstXpMzTzXfOmXMWNdVQh_wXzM0vztbE";

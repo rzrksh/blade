@@ -9,7 +9,7 @@ import {
 
 export const URLTemplating = () => {
   return (
-    <Card className="min-w-full">
+    <Card className="min-w-0">
       <CardHeader>
         <CardTitle>URL Templating</CardTitle>
         <CardDescription>
